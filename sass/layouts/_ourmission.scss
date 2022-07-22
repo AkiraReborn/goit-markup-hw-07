@@ -1,0 +1,26 @@
+.our-mission {
+    padding-bottom: 94px;
+  }
+  
+  .our-mission-name {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--titel-link-color);
+  
+    margin: 0px;
+    display: block;
+  }
+  
+  .our-mission-image {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 50px auto 0px;
+
+    & li {
+        line-height: 0px;
+      }
+  }
+  

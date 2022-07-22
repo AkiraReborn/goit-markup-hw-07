@@ -1,0 +1,61 @@
+.our-clients-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  
+  .our-clients-name {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--titel-link-color);
+  
+    margin: 0px auto 50px;
+  }
+  
+  .our-clients-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+
+    & li {
+        display: flex;
+        width: 170px;
+        height: 92px;
+      
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+    & li + li {
+        margin-left: 26px;
+      }
+
+    & li:hover .our-clients-links-icon{
+        fill: var(--accent-color);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+    & li:hover{
+        border: 1px solid var(--accent-color);
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+  }
+
+  
+  
+  .our-clients-links-icon {
+    margin: 16px 32px;
+    fill: var(--client-company-icon);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .link:focus & {
+      fill: var(--accent-color);
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+  }
+
+  
+  

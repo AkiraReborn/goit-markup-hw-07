@@ -1,0 +1,60 @@
+.our-team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  
+    background-color: var(--secondary-bg-color);
+  }
+  
+  .our-team-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+  
+  .our-team-name {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--titel-link-color);
+  
+    margin: 0px auto 50px;
+  }
+  
+  .our-team-list_member {
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
+      0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 0px 0px 4px 4px;
+
+    & h3 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--titel-link-color);
+      
+        margin: 0px;
+        margin-bottom: 10px;
+      }
+
+    & p {
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--primary-text-color);
+      
+        margin: 0px;
+      }
+      
+
+  }
+  
+  .member-data {
+    padding: 30px 0px 30px;
+    background-color: var(--address-color);
+  }
+  
+  

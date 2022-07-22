@@ -1,0 +1,10 @@
+body {
+    background-color: #fff;
+    font-family: "Roboto", "Raleway", sans-serif;
+    color: var(--primary-text-color);
+  }
+
+.hero,
+footer {
+  background-color: var(--footer-hero-bg-color);
+}

@@ -1,0 +1,77 @@
+nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav > .list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .navbar {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .navbar_item:not(:last-child) {
+    margin-right: 50px;
+  }
+  
+  .navbar_item a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--titel-link-color);
+  
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+  }
+  
+  .navbar_item a:hover,
+  .navbar_item a:focus,
+  .contacts a:hover,
+  .contacts a:focus,
+  .contacts-footer a:hover,
+  .contacts-footer a:focus {
+    color: var(--accent-color);
+  
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .nav > .navbar .link.current::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    opacity: 1;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  
+  }
+  
+  .navbar_item a::after {
+    content: "";
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    opacity: 0;
+  
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .navbar_item a:hover::after {
+    opacity: 1;
+  
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }

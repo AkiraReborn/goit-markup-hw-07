@@ -1,0 +1,238 @@
+
+/* Modal styles */
+
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+
+  visibility: visible;
+  opacity: 1;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8) rotateY(45deg) rotateX(90deg)
+    rotateZ(180deg);
+}
+.backdrop.is-hidden .modal .icon-md-close {
+  transform: scale(1);
+}
+
+.modal-title {
+  display: block;
+  margin-bottom: 28px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--titel-link-color);
+}
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 528px;
+  max-width: 100%;
+
+  max-height: 100%;
+
+  padding: 40px;
+
+  background: var(--address-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 2;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-list-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding: 0px;
+
+  list-style-type: none;
+}
+.modal-list-form .modal-field-item:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.modal-field-item {
+  position: relative;
+}
+
+.form-label {
+  position: absolute;
+  display: block;
+  top: -16px;
+  left: 0px;
+  font-size: 12px;
+
+  color: var(--primary-text-color);
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textfield {
+  padding: 12px 18px 12px 42px;
+  width: 448px;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.comment-field {
+  position: relative;
+}
+.comment-label {
+  margin-top: 10px;
+  font-size: 12px;
+  position: absolute;
+  top: -25px;
+  left: 0px;
+  color: var(--primary-text-color);
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment::placeholder{
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.comment {
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  font-size: 12px;
+  color: var(--primary-text-color);
+
+  transform: scale(1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textfield:focus,
+.comment:focus {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.form-icon {
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  fill: var(--secondary-text-color);
+}
+
+.textfield:focus ~ .form-icon,
+.textfield:not(:placeholder-shown) ~ .form-icon,
+.comment:focus ~ .form-icon,
+.comment:not(:placeholder-shown) ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+
+.modal-consent {
+  display: flex;
+  align-items: center;
+  width: 425px;
+  font-size: 14px;
+
+  padding-left: 14px;
+  margin: 0px;
+
+  line-height: 1.71;
+
+  color: var(--primary-text-color);
+}
+
+.modal-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+
+  border: 2px solid;
+  border-color: var(--logo-up-color);
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox:checked + .checkbox-icon {
+  border-color: transparent;
+  background-color: var(--accent-color);
+  background-image: url(../images/check-icon.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.modal-link-consent {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.modal-close {
+  position: absolute;
+
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+
+  color: #000000;
+  background-color: var(--address-color);
+
+  border-radius: 50%;
+  border: none;
+  outline: none;
+
+  transform: scale(1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+

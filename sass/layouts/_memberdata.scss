@@ -1,0 +1,62 @@
+.member-data_links {
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    padding: 0px;
+    justify-content: center;
+
+    & li {
+        display: inline-block;
+        width: 44px;
+        height: 44px;
+      }
+
+    & .link {
+        display: flex;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+      }
+      
+    & .link:focus {
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+    & li + li {
+        margin-left: 10px;
+      }
+
+    & li:hover {
+        background-color: var(--accent-color);
+        border-radius: 50%;
+      
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+    & li{
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+    & li:hover .member-data_links-icon {
+        fill: var(--address-color);
+      
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+    & li svg {
+        fill: var(--client-company-icon);
+        margin: 12px;
+      }
+  }
+  
+  .member-data_contacts {
+    margin-top: 16px;
+  }
+  
+  
+  .link:focus .member-data_links-icon {
+    fill: var(--address-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }

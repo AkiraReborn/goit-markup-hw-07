@@ -1,0 +1,42 @@
+.our-social-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+
+
+    & li {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        margin: 0px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+
+    & li + li {
+        margin-left: 10px;
+      }
+      
+
+    & li svg {
+        margin: 12px;
+        fill: var(--address-color);
+      }
+
+
+    & li:hover {
+        background-color: var(--accent-color);
+      
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+    & .link:focus {
+        background-color: var(--accent-color);
+        border-radius: 50%;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+  }
+  
