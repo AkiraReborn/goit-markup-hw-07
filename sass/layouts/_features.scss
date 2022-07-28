@@ -3,14 +3,14 @@
     padding-bottom: 94px;
   }
   
-  .features_list {
+  .features__list {
     display: flex;
     justify-content: space-between;
     margin: 0px;
     padding: 0px;
   }
 
-  .item-box_icon {
+  .item-box__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     height: 120px;
   }
   
-  .features_item {
+  .features__item {
     width: 270px;
   }
   
